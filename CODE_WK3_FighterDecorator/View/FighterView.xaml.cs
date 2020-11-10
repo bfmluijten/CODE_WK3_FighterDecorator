@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DPINT_Wk2_Decorator.View
+namespace CODE_WK3_FighterDecorator.View
 {
     /// <summary>
     /// Interaction logic for FighterView.xaml

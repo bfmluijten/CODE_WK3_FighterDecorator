@@ -1,9 +1,9 @@
-﻿<Window x:Class="DPINT_Wk2_Decorator.View.FighterView"
+﻿<Window x:Class="CODE_WK3_FighterDecorator.View.FighterView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DPINT_Wk2_Decorator.View"
+        xmlns:local="clr-namespace:CODE_WK3_FighterDecorator.View"
         mc:Ignorable="d"
         Title="FighterView" Height="443.2" Width="849.6"
         DataContext="{ Binding Fighter, Source={ StaticResource Locator }}">

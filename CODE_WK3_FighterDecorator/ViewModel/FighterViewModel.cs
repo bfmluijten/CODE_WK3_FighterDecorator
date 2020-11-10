@@ -1,4 +1,4 @@
-﻿using DPINT_Wk2_Decorator.Model;
+﻿using CODE_WK3_FighterDecorator.Model;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DPINT_Wk2_Decorator.ViewModel
+namespace CODE_WK3_FighterDecorator.ViewModel
 {
     public class FighterViewModel : ViewModelBase
     {

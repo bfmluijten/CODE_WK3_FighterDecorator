@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DPINT_Wk2_Decorator.ViewModel
+namespace CODE_WK3_FighterDecorator.ViewModel
 {
     public class FighterOptionsViewModel : ViewModelBase
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace DPINT_Wk2_Decorator
+namespace CODE_WK3_FighterDecorator
 {
     /// <summary>
     /// This class contains a few useful extenders for the ListBox

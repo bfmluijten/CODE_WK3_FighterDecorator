@@ -20,10 +20,10 @@ using System;
 using GalaSoft.MvvmLight.Views;
 using System.Windows.Navigation;
 using GalaSoft.MvvmLight.Messaging;
-using DPINT_Wk2_Decorator.View;
+using CODE_WK3_FighterDecorator.View;
 using System.Threading;
 
-namespace DPINT_Wk2_Decorator.ViewModel
+namespace CODE_WK3_FighterDecorator.ViewModel
 {
     /// <summary>
     /// This class contains static references to all the view models in the
