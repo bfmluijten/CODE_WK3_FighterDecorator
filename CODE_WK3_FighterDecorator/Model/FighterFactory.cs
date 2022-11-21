@@ -32,30 +32,13 @@ namespace CODE_WK3_FighterDecorator.Model
 
         public IFighter CreateFighter(int lives, int attack, int defense, IEnumerable<string> options)
         {
-            Fighter fighter = new Fighter(lives, attack, defense);
+            IFighter fighter = new Fighter(lives, attack, defense);
 
-            foreach (var option in options)
-            {
-                switch (option)
-                {
-                    case DOUBLE_HANDED:
-                        fighter.DoubleHanded = true;
-                        break;
-                    case MINION:
-                        fighter.MinionLives = fighter.Lives / 2;
-                        fighter.MinionAttackValue = fighter.AttackValue / 2;
-                        break;
-                    case POISON:
-                        fighter.PoisonStrength = 10;
-                        break;
-                    case SHIELD:
-                        fighter.ShieldDefends = 3;
-                        break;
-                    case SHOTGUN:
-                        fighter.UseShotgun = true;
-                        break;
-                }
-            }
+            fighter = new DoubleHandedFighterDecorator(fighter);
+            fighter = new MinionFighterDecorator(fighter, MinionLives: fighter.Lives / 2, MinionAttackValue: fighter.AttackValue / 2);
+            fighter = new PoisonFighterDecorator(fighter, PoisonStrength: 10);
+            fighter = new ShieldFighterDecorator(fighter, ShieldDefends: 3);
+            fighter = new ShotgunFighterDecorator(fighter);
 
             return fighter;
         }

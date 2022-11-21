@@ -10,8 +10,9 @@ namespace CODE_WK3_FighterDecorator.Model
     {
         public int PoisonStrength { get; set; }
 
-        public PoisonFighterDecorator(IFighter next) : base(next)
+        public PoisonFighterDecorator(IFighter next, int PoisonStrength) : base(next)
         {
+            this.PoisonStrength = PoisonStrength;
         }
 
         public override Attack Attack()

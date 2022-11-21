@@ -10,8 +10,9 @@ namespace CODE_WK3_FighterDecorator.Model
     {
         public int ShieldDefends { get; set; }
 
-        public ShieldFighterDecorator(IFighter next) : base(next)
+        public ShieldFighterDecorator(IFighter next, int ShieldDefends) : base(next)
         {
+            this.ShieldDefends = ShieldDefends;
         }
 
         public override void Defend(Attack attack)

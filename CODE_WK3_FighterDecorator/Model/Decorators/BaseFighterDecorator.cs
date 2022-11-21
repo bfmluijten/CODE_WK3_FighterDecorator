@@ -15,9 +15,44 @@ namespace CODE_WK3_FighterDecorator.Model
             this.next = next;
         }
 
-        public int Lives { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int AttackValue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int DefenseValue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int AttackValue
+        {
+            get
+            {
+                return next.AttackValue;
+            }
+
+            set
+            {
+                next.AttackValue = value;
+            }
+        }
+
+        public int DefenseValue
+        {
+            get
+            {
+                return next.DefenseValue;
+            }
+
+            set
+            {
+                next.DefenseValue = value;
+            }
+        }
+
+        public int Lives
+        {
+            get
+            {
+                return next.Lives;
+            }
+
+            set
+            {
+                next.Lives = value;
+            }
+        }
 
         public virtual Attack Attack()
         {

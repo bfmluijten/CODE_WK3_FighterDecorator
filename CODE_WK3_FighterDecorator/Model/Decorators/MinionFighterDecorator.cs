@@ -11,8 +11,10 @@ namespace CODE_WK3_FighterDecorator.Model
         public int MinionLives { get; set; }
         public int MinionAttackValue { get; set; }
 
-        public MinionFighterDecorator(IFighter next) : base(next)
+        public MinionFighterDecorator(IFighter next, int MinionLives, int MinionAttackValue) : base(next)
         {
+            this.MinionLives = MinionLives;
+            this.MinionAttackValue = MinionAttackValue;
         }
 
         public override Attack Attack()
