@@ -27,7 +27,7 @@ namespace CODE_WK3_FighterDecorator.Model
             FighterOptions[SHOTGUN] = "Adding attack, needs reloading every 2 times.";
             
             // TODO: Implement strengthen on fighter
-            //FighterOptions[STRENGTHEN] = "Increasing attack by 10%, increasing defense by 10%.";
+            FighterOptions[STRENGTHEN] = "Increasing attack by 50%, increasing defense by 50%.";
         }
 
         public IFighter CreateFighter(int lives, int attack, int defense, IEnumerable<string> options)
@@ -39,6 +39,7 @@ namespace CODE_WK3_FighterDecorator.Model
             if (options.Contains(POISON)) fighter = new PoisonFighterDecorator(fighter, PoisonStrength: 10);
             if (options.Contains(SHIELD)) fighter = new ShieldFighterDecorator(fighter, ShieldDefends: 3);
             if (options.Contains(SHOTGUN)) fighter = new ShotgunFighterDecorator(fighter);
+            if (options.Contains(STRENGTHEN)) fighter = new StrengthenFighterDecorator(fighter, PercentageStrengthend: 50);
 
             return fighter;
         }
