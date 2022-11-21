@@ -34,11 +34,11 @@ namespace CODE_WK3_FighterDecorator.Model
         {
             IFighter fighter = new Fighter(lives, attack, defense);
 
-            fighter = new DoubleHandedFighterDecorator(fighter);
-            fighter = new MinionFighterDecorator(fighter, MinionLives: fighter.Lives / 2, MinionAttackValue: fighter.AttackValue / 2);
-            fighter = new PoisonFighterDecorator(fighter, PoisonStrength: 10);
-            fighter = new ShieldFighterDecorator(fighter, ShieldDefends: 3);
-            fighter = new ShotgunFighterDecorator(fighter);
+            if (options.Contains(DOUBLE_HANDED)) fighter = new DoubleHandedFighterDecorator(fighter);
+            if (options.Contains(MINION)) fighter = new MinionFighterDecorator(fighter, MinionLives: fighter.Lives / 2, MinionAttackValue: fighter.AttackValue / 2);
+            if (options.Contains(POISON)) fighter = new PoisonFighterDecorator(fighter, PoisonStrength: 10);
+            if (options.Contains(SHIELD)) fighter = new ShieldFighterDecorator(fighter, ShieldDefends: 3);
+            if (options.Contains(SHOTGUN)) fighter = new ShotgunFighterDecorator(fighter);
 
             return fighter;
         }
